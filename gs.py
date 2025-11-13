@@ -32,3 +32,8 @@ def recomendar_acoes(risco):
         acoes = ["Manter hábitos saudáveis", "Continuar rotina equilibrada"]
         cursos = ["Aprendizado Contínuo", "Autogestão de Carreira"]
     return acoes, cursos
+
+def main():
+    print("="*60)
+    print("Sistema de Bem-Estar e Futuro do Trabalho")
+    print("="*60)
