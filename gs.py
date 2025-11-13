@@ -37,3 +37,34 @@ def main():
     print("="*60)
     print("Sistema de Bem-Estar e Futuro do Trabalho")
     print("="*60)
+
+while True:
+        try:
+           
+            nome = input("\nDigite seu nome: ")
+
+            estresse = int(input("Em uma escala de 0 a 10, qual seu nível de estresse? "))
+            sono = int(input("Quantas horas você dorme por noite (em média)? "))
+            atividade = int(input("Quantos dias por semana pratica atividade física? "))
+
+            risco = avaliar_bem_estar(estresse, sono, atividade)
+            acoes, cursos = recomendar_acoes(risco)
+
+            print("\n Resultado da Avaliação:")
+            print(f"Nome: {nome}")
+            print(f"Nível de risco: {risco}")
+            print("\n Ações recomendadas:")
+            for acao in acoes:
+                print(f"- {acao}")
+            print("\n Cursos sugeridos:")
+            for curso in cursos:
+                print(f"- {curso}")
+
+        except ValueError:
+            print("\n Por favor, digite apenas números válidos nas perguntas!")
+            continue  
+
+        repetir = input("\nDeseja avaliar outro colaborador? (s/n): ").strip().lower()
+        if repetir != "s":
+            print("\n Programa encerrado. Cuide da sua saúde e continue aprendendo!")
+            break    
