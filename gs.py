@@ -74,4 +74,7 @@ while True:
         # Finaliza o programa
         if repetir != "s":
             print("\n Programa encerrado. Cuide da sua saúde e continue aprendendo!")
-            break    
+            break 
+
+if __name__ == "__main__":
+    main()        
