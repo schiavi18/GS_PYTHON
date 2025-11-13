@@ -34,7 +34,7 @@ def recomendar_acoes(risco):
     return acoes, cursos
 
 print("Bem-vindo(a) ao Sistema de Bem-Estar no Futuro do Trabalho ")
-print("Este programa vai ajudá-lo(a) a refletir sobre seu nível de bem-estar,")
+print("Este programa vai ajudá-lo(a) a refletir sobre seu nível de bem-estar")
 
 while True:       
     try:
