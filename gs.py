@@ -76,5 +76,6 @@ while True:
             print("\n Programa encerrado. Cuide da sua saúde e continue aprendendo!")
             break 
 
+# Executa o programa principal
 if __name__ == "__main__":
     main()        
