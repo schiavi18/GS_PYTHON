@@ -33,6 +33,7 @@ def recomendar_acoes(risco):
         cursos = ["Aprendizado Contínuo", "Autogestão de Carreira"]
     return acoes, cursos
 
+# Função principal do programa
 def main():
     print("="*60)
     print("Sistema de Bem-Estar e Futuro do Trabalho")
@@ -40,16 +41,19 @@ def main():
 
 while True:
         try:
-           
+           # Coleta o nome do usuário
             nome = input("\nDigite seu nome: ")
 
+           # Solicita dados com validação
             estresse = int(input("Em uma escala de 0 a 10, qual seu nível de estresse? "))
             sono = int(input("Quantas horas você dorme por noite (em média)? "))
             atividade = int(input("Quantos dias por semana pratica atividade física? "))
 
+           # Avalia o risco e obtém recomendações
             risco = avaliar_bem_estar(estresse, sono, atividade)
             acoes, cursos = recomendar_acoes(risco)
 
+           # Exibe os resultados e recomendações
             print("\n Resultado da Avaliação:")
             print(f"Nome: {nome}")
             print(f"Nível de risco: {risco}")
@@ -61,10 +65,13 @@ while True:
                 print(f"- {curso}")
 
         except ValueError:
+            # Exibe a mensagem de erro caso um número válido não seja digitado
             print("\n Por favor, digite apenas números válidos nas perguntas!")
-            continue  
+            continue  # reinicia o loop
 
+        # Pergunta se o usuário quer repetir o processo
         repetir = input("\nDeseja avaliar outro colaborador? (s/n): ").strip().lower()
+        # Finaliza o programa
         if repetir != "s":
             print("\n Programa encerrado. Cuide da sua saúde e continue aprendendo!")
             break    
