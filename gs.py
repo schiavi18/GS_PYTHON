@@ -34,42 +34,46 @@ def recomendar_acoes(risco):
     return acoes, cursos
 
 print("Bem-vindo(a) ao Sistema de Bem-Estar no Futuro do Trabalho ")
-print("Este programa vai ajudá-lo(a) a refletir sobre seu nível de bem-estar")
+print("Este programa vai ajudá-lo(a) a refletir sobre seu nível de bem-estar,")
 
 while True:       
-        try:
-           # Coleta o nome do usuário
-            nome = input("\nDigite seu nome: ")
+    try:
+        # Coleta o nome do usuário com validação (somente letras e espaços)
+        while True:
+            nome = input("\nDigite seu nome: ").strip()
+            if all(c.isalpha() or c.isspace() for c in nome) and nome != "":
+                break
+            else:
+                print("Por favor, digite um nome válido (apenas letras).")
 
-           # Solicita dados com validação
-            estresse = int(input("Em uma escala de 0 a 10, qual seu nível de estresse? "))
-            sono = int(input("Quantas horas você dorme por noite (em média)? "))
-            atividade = int(input("Quantos dias por semana pratica atividade física? "))
+        # Solicita dados com validação
+        estresse = int(input("Em uma escala de 0 a 10, qual seu nível de estresse? "))
+        sono = int(input("Quantas horas você dorme por noite (em média)? "))
+        atividade = int(input("Quantos dias por semana pratica atividade física? "))
 
-           # Avalia o risco e obtém recomendações
-            risco = avaliar_bem_estar(estresse, sono, atividade)
-            acoes, cursos = recomendar_acoes(risco)
+        # Avalia o risco e obtém recomendações
+        risco = avaliar_bem_estar(estresse, sono, atividade)
+        acoes, cursos = recomendar_acoes(risco)
 
-           # Exibe os resultados e recomendações
-            print("\n Resultado da Avaliação:")
-            print(f"Nome: {nome}")
-            print(f"Nível de risco: {risco}")
-            print("\n Ações recomendadas:")
-            for acao in acoes:
-                print(f"- {acao}")
-            print("\n Cursos sugeridos:")
-            for curso in cursos:
-                print(f"- {curso}")
+        # Exibe os resultados e recomendações
+        print("\n Resultado da Avaliação:")
+        print(f"Nome: {nome}")
+        print(f"Nível de risco: {risco}")
+        print("\n Ações recomendadas:")
+        for acao in acoes:
+            print(f"- {acao}")
+        print("\n Cursos sugeridos:")
+        for curso in cursos:
+            print(f"- {curso}")
 
-        except ValueError:
-            # Exibe a mensagem de erro caso um número válido não seja digitado
-            print("\n Por favor, digite apenas números válidos nas perguntas!")
-            continue  # reinicia o loop
+    except ValueError:
+        # Exibe a mensagem de erro caso um número válido não seja digitado
+        print("\n Por favor, digite apenas números válidos nas perguntas!")
+        continue  # reinicia o loop
 
-        # Pergunta se o usuário quer repetir o processo
-        repetir = input("\nDeseja avaliar outro colaborador? (s/n): ").strip().lower()
-        # Finaliza o programa
-        if repetir != "s":
-            print("\n Muito obrigado pela confiança. Cuide da sua saúde e continue aprendendo!")
-            break 
-     
+    # Pergunta se o usuário quer repetir o processo
+    repetir = input("\nDeseja avaliar outro colaborador? (s/n): ").strip().lower()
+    # Finaliza o programa
+    if repetir != "s":
+        print("\n Muito obrigado pela confiança. Cuide da sua saúde e continue aprendendo!")
+        break 
