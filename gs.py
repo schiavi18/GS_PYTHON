@@ -16,3 +16,18 @@ def avaliar_bem_estar(estresse, sono, atividade):
 # Caso contrário, risco baixo    
     else:
         return "BAIXO"
+    
+def recomendar_acoes(risco):
+
+    if risco == "ALTO":
+        acoes = ["Agendar consulta psicológica", "Reduzir carga horária temporariamente"]
+        cursos = ["Gestão do Estresse", "Equilíbrio entre vida pessoal e trabalho"]
+
+    elif risco == "MÉDIO":
+        acoes = ["Fazer pausas durante o expediente", "Praticar atividade física leve"]
+        cursos = ["Mindfulness", "Inteligência emocional no trabalho"]
+
+    else:
+        acoes = ["Manter hábitos saudáveis", "Continuar rotina equilibrada"]
+        cursos = ["Aprendizado Contínuo", "Autogestão de Carreira"]
+    return acoes, cursos
