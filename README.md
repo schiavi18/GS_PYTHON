@@ -1,7 +1,7 @@
 # 🧠💼 FutureWork Balance  
 ##  Sistema Inteligente de Monitoramento de Bem-Estar e Requalificação no Futuro do Trabalho  
 
-**👉 LINK VÍDEO EXPLICATIVO ->** [Click aqui para acessar ao código. ](COLOCAR LINK) 
+**👉 LINK VÍDEO EXPLICATIVO ->** [Click aqui para acessar ao vídeo. ](https://youtu.be/H3-iIEzllHs?si=GUM48W-XsThKmEJ6) 
 
 # 🎯 Sobre o Projeto  
 O **FutureWork Balance** é um sistema desenvolvido para avaliar o bem-estar de colaboradores no contexto do **Futuro do Trabalho**, unindo:
