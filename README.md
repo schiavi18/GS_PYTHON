@@ -35,7 +35,13 @@ Realiza:
 - Pergunta para continuar ou encerrar  
 
 ---
+## 📌 Observações Importantes
 
+- O sistema não substitui avaliação médica ou psicológica profissional!!!
+
+- É um recurso educacional sobre bem-estar e requalificação no futuro do trabalho.
+
+- Pode ser integrado futuramente com dashboards ou APIs.
 
 ## 👩‍💻 Desenvolvedores  
 - **Josué Faria da Silva** – RM: 563819  
